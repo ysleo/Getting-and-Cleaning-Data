@@ -18,7 +18,7 @@ download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUC
 
  * Merge Data train and test by concatenating rows
 
- ```{r}
+```{r}
 train <- read.table(unz(temp, "UCI HAR Dataset/train/X_train.txt"))
 test <- read.table(unz(temp, "UCI HAR Dataset/test/X_test.txt"))
 testtrain <- rbind(train, test)
@@ -26,7 +26,7 @@ testtrain <- rbind(train, test)
 
  * Name the data column by using the feature data
 
- ``{r}
+```{r}
 features <- read.table(unz(temp, "UCI HAR Dataset/features.txt"))
 names(testtrain) <- unlist(features[2])
 
@@ -34,7 +34,7 @@ names(testtrain) <- unlist(features[2])
 
  * Clean Data by keeping only mean and std column
 
- ```{r}
+```{r}
 testtrainext <- testtrain[  grepl( "mean|std" , names( testtrain ) )]
 ```
 
@@ -63,7 +63,7 @@ testtrainfinal <- cbind(testtrainactivitiesmerged, subject)
 
  * Aggregate data
 
- ```{r}
+```{r}
 tidyData <-aggregate(. ~ Subject + Activity, testtrainfinal, mean)
 tidyData <- tidyData[order(tidyData$Subject,tidyData$ActivityName),]
 ```
