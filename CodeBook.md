@@ -15,8 +15,16 @@ It contains :
 
 ## Tidy Data Variables
 
+### The dataset includes the following files:
+
+A single file : tidyData.txt
+
+### Each record
+
+The file contains 35 rows with 
+
  * Subject : Each subject is identified by a number
- * Activity : Ecah Activity is identified by a number and a label
+ * Activity : Each Activity is identified by two column : a number and a label
   * 1 WALKING
   * 2 WALKING_UPSTAIRS
   * 3 WALKING_DOWNSTAIRS
