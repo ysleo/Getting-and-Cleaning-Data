@@ -23,5 +23,5 @@ It contains :
   * 4 SITTING
   * 5 STANDING
   * 6 LAYING
- * All variables are the mean of all the sample aggregated by subject and activy
+ * All variables are the mean of all the sample aggregated by subject and activity
 
